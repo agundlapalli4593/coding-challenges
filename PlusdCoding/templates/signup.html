@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="header"">
+            <h1>Events Manager App</h1>
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation"><a class="button button2" href="/logout">Home</a></li>
+                    <li role="presentation"><a class="button button2" href="/showSignin">Sign In</a></li>
+                    <li role="presentation"><a class="button button2" href="/showSignUp">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+      <div class="jumbotron">
+        <form class="form-signup" action="/signUp" method="post">
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>

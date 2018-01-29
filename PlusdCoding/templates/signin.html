@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <div class="header" >
+            <h1>Events Manager App</h1>
+            <nav style="float: right;">
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation"><a class="button button2" href="/">Home</a></li>
+                    <li role="presentation"><a class="button button2" href="/showSignin">Sign In</a></li>
+                    <li role="presentation"><a class="button button2" href="/showSignUp">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+      <div class="jumbotron">
+        <form class="form-signin" action="/validateLogin" method="post">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>

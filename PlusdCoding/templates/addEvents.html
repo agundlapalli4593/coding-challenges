@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+   <link href="../static/css/signup.css" rel="stylesheet">
+   <link href="../static/css/eventform.css" rel="stylesheet">
+   <script src="../static/js/addEvents.js"></script>
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+         <div class="linksnav" style="float: right;">
+            <nav>
+               <ul class="nav nav-pills pull-right">
+                  <li role="presentation"><a class="button button2" href="/getEvent">Home</a></li>
+                  <li role="presentation"><a class="button button2" href="/showAddEvents">Add Event</a></li>
+                  <li role="presentation"><a class="button button3"href="/logout">Logout</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <section>
+         <form class="form-horizontal" method="post" action="/addEvent">
+            <fieldset>
+               <!-- Form Name -->
+               <legend>Create a New Event</legend>
+               <!-- Text input-->
+               <label for="fname">Event Title</label>
+               <input type="text" id="fname" name="eventTitle" placeholder="Enter event title">
+               <label for="lname">Event Description</label>
+               <input type="text" id="lname" name="eventDescription" placeholder="Event Description"><br>
+               <label>Event Date</label>
+               <input type="date" name="eventdate">
+               <label>Event Location</label>
+               <input type="text" name="eventloc">
+               <label>Event Time</label>
+               <input type="text" name="eventtime">
+               <!-- Button -->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="singlebutton"></label>
+                  <div class="col-md-4">
+                     <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Add Event" />
+                  </div>
+               </div>
+            </fieldset>
+         </form>
+      </section>
+   </div>
+</body>
+</html>

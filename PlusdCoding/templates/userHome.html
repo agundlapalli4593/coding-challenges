@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+      <link href="../static/css/signup.css" rel="stylesheet">
+      <link href="../static/css/userhm.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+         <div class="linksnav" style="float: right;">
+            <nav>
+               <ul class="nav nav-pills pull-right">
+                  <li role="presentation"><a class="button button2" href="/showAddEvents">Add Event</a></li>
+                  <li role="presentation"><a class="button button3"href="/logout">Logout</a></li>
+               </ul>
+            </nav>
+         </div>
+         <h3 class="text-muted">Events Management</h3>
+      </div>
+      <div class="jumbotron">
+         <table id="customers">
+    <thead>
+        <tr>
+            <th>Event Id</th>
+            <th>Event Title</th>
+            <th>Event Desc</th>
+            <th>Event Date</th>
+            <th>Event Time</th>
+            <th>Event Location</th>
+            <th>Syndicate Status</th>
+        <tr>
+    </thead>
+    <tbody>
+        {% for person in data %}
+        <tr id="">
+            <td>{{ person[0]}}</td>
+            <td>{{ person[1]}}</td>
+            <td>{{ person[2]}}</td>
+            <td>{{ person[4]}}</td>
+            <td>{{ person[5]}}</td>
+            <td>{{ person[6]}}</td>
+            {% if (person[8]==0) %}
+            <td><button type="button" class="btn btn-danger btn-sm">Non Syncyed</button> </td>
+            {% else %}
+            <td><button type="button" class="btn btn-success btn-md">Synced</button></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+      </div>
+    </div>
+  </body>
+</html>
