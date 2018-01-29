@@ -1,0 +1,4 @@
+Flask==0.10.1
+APScheduler==3.5.1
+Flask_Bcrypt==0.7.1
+mysql_connector_repackaged==0.3.1
