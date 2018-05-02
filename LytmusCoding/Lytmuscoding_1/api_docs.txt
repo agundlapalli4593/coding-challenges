@@ -1,0 +1,81 @@
+API DOCUMENTATION FOR ACME SHOPPING
+
+------------------------------------------------------------------------------------
+
+ENDPOINT
+    GET /products?page={page}&
+                  per_page={per_page}
+
+URI ARGUMENTS
+    page: (optional, default is 1) Integer specifiying which page to retrieve. 
+        The first page is page 1.
+    per_page: (optional, default is 10) Integer specifying the maximum number of 
+        products in each page. The maximum value of per_page is 20.
+
+RESPONSE BODY
+    A page of products.
+
+RESPONSE HEADERS
+    X-Number-Objects: Integer representing the total number of products
+        existing in the database.
+    X-Number-Pages: Integer representing the total number of pages of products.
+
+EXAMPLE RESPONSE BODY
+    [
+        {
+            "id": 5991,
+            "category": "Electronics",
+            "title": "Fujifilm Instax Mini 70 - Instant Film Camera (Blue)",
+            "price": 105.31,
+            "rating": 4.5,
+            "stock": 155
+        },
+        ...
+    ]
+
+------------------------------------------------------------------------------------
+
+ENDPOINT
+    GET /orders?page={page}&
+                per_page={per_page}
+
+DESCRIPTION
+    Retrieve a page of customer orders.
+
+URI ARGUMENTS
+    page: (optional, default is 1) Integer specifiying which page to retrieve.
+        The first page is page 1.
+    per_page: (optional, default is 10) Integer specifying the maximum number of 
+        orders in each page. The maximum value of per_page is 20.
+
+RESPONSE BODY
+    A page of customer orders.
+
+RESPONSE HEADERS
+    X-Number-Objects: Integer representing the total number of orders
+        existing in the database.
+    X-Number-Pages: Integer representing the total number of pages of orders.
+
+EXAMPLE RESPONSE BODY
+    [
+        {
+            "id": 38475,
+            "create_time": 1416949633,
+            "customer_id": 102,
+            "products": [
+                {
+                    "id": 5991,
+                    "quantity": 1,
+                    "unit_price": 102.23
+                },
+                {
+                    "id": 3844,
+                    "quantity": 2,
+                    "unit_price": 15.94
+                }
+            ]
+        },
+        ...
+    ]
+
+------------------------------------------------------------------------------------

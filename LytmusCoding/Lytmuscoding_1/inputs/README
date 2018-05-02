@@ -1,0 +1,17 @@
+This folder contains input files to test your program.
+You may modify these files or add your own - they are purely for debugging.
+
+Each JSON file contains a dictionary with input parameters to your program.
+For example:
+    {
+        "nr_workers": 20, 
+        "port": 8000, 
+        "per_page": 20, 
+        "csv_file": "/tmp/output.csv"
+    }
+
+To test your program using the JSON file run:
+    python test_answer.py ./inputs/twenty_workers_twenty_per_page.json
+
+This calls parallel_get_products() in answer.py as follows:
+    parallel_get_products(nr_workers, port, per_page, csv_file)

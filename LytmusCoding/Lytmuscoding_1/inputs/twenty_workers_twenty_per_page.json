@@ -1,0 +1,6 @@
+{
+    "nr_workers": 20,
+    "port": 8000,
+    "per_page": 20,
+    "csv_file": "/tmp/output.csv"
+}
